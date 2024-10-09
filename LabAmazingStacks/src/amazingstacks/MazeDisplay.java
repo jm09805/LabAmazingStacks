@@ -14,7 +14,7 @@ public class MazeDisplay extends AnimationComponent
     private static final int MAZE_HEIGHT = 9;
     private static final int MAZE_WIDTH = 12;
     
-    private CarvedMaze m;
+    private final CarvedMaze m;
     
     public MazeDisplay()
     {

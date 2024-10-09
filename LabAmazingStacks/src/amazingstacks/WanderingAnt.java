@@ -19,8 +19,8 @@ public class WanderingAnt
     public static final double CHANGE_DIRECTION_PROB = 0.1;
     public static final int SIGHT_DISTANCE = 8;
     
-    private Cell location;
-    private Cell nest;
+    private final Cell location;
+    private final Cell nest;
     
     private boolean carryingFood, thinksItHasFood;
     private int lastMovedDirection;

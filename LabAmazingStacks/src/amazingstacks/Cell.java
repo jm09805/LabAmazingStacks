@@ -53,18 +53,10 @@ public class Cell extends java.awt.Point
     {
         switch (dir)
         {
-        case NORTH:
-            translate(0,-1);
-            break;
-        case SOUTH:
-            translate(0,+1);
-            break;
-        case WEST:
-            translate(-1,0);
-            break;
-        case EAST:
-            translate(+1,0);
-            break;
+        case NORTH -> translate(0,-1);
+        case SOUTH -> translate(0,+1);
+        case WEST -> translate(-1,0);
+        case EAST -> translate(+1,0);
         }
     }
     
@@ -86,9 +78,8 @@ public class Cell extends java.awt.Point
     @Override
     public boolean equals(Object o)
     {
-        if (o instanceof Cell)
+        if (o instanceof Cell c)
         {
-            Cell c=(Cell)o;
             return (this.x==c.x && this.y==c.y);
         }
         else
@@ -98,5 +89,11 @@ public class Cell extends java.awt.Point
     public static int distance1(Cell c1, Cell c2)
     {
         return Math.abs(c1.x-c2.x)+Math.abs(c1.y-c2.y);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
     }
 }

@@ -61,18 +61,10 @@ public class Maze
     {
         switch (direction)
         {
-        case Cell.NORTH:
-            hwalls[c.x][c.y]=false;
-            break;
-        case Cell.SOUTH:
-            hwalls[c.x][c.y+1]=false;
-            break;
-        case Cell.WEST:
-            vwalls[c.x][c.y]=false;
-            break;
-        case Cell.EAST:
-            vwalls[c.x+1][c.y]=false;
-            break;
+        case Cell.NORTH -> hwalls[c.x][c.y]=false;
+        case Cell.SOUTH -> hwalls[c.x][c.y+1]=false;
+        case Cell.WEST -> vwalls[c.x][c.y]=false;
+        case Cell.EAST -> vwalls[c.x+1][c.y]=false;
         }
         
     }

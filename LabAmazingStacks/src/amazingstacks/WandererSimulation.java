@@ -24,9 +24,9 @@ public class WandererSimulation extends AnimationComponent
     
     public static final double DROP_FOOD_PROB = 0.05;
     
-    private WanderingAnt ant;
+    private final WanderingAnt ant;
     private Cell foodLocation;
-    private Cell nestLocation;
+    private final Cell nestLocation;
     
     public WandererSimulation()
     {
